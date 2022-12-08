@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- CSS only -->
+<!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+
+<body>
+    <div style="text-align: center;">
+        <h1  style="color:#005aff;"><strong><u>'Alerts', 'Confirms', & 'Prompts'</u></strong></h1>
+    </div>
+<br>
+<br>
+<br>
+<div id="alerts"  style="margin-left:25px;">
+    <div id="bootStrapAlertExample">
+
+        <script>
+            function showMyBootStrapAlert() {
+              var dd = document.getElementById("bootStrapAlert");
+                dd.classList.add("show");
+            }
+        </script>
+        <button onclick="showMyBootStrapAlert();" class="btn btn-info"  style="width:250px;">
+            Show an alert (html alert)
+        </button>
+            <div class="alert alert-warning alert-dismissible fade" id="bootStrapAlert" role="alert">
+              This is alert using just html.
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+
+    </div> <!-- bootStrapAlertExample -->
+
+    <div id="jsAlertExample" style="margin-top: 25px">
+    <button onclick="alert('I am a JavaScript Alert');" class="btn btn-warning" style="width:250px;">
+        Show a JavaScript Alert
+    </button>
+    </div> <!-- jsAlertExample -->
+    <br>
+    <div id="jsConfirmExample" style="margin-top: 25px">
+        <button onclick="myConfirmFunction();" class="btn btn-success"  style="width:250px;">
+            Show a 'Confirm' alert
+        </button>
+        <div style="margin:10px;"><p id="userResponse1"></p></div>
+        <script>
+            function myConfirmFunction() {
+              var msg;
+              var txtColor;
+              var rs = confirm("Do you like Selenium? 'Cancel' for No, 'Ok' for Yes.");
+              if (rs == true) {
+                msg = "Great! You will love it!";
+                txtColor = "green";
+              } else {
+                msg = "Too bad!!! You would've loved it!";
+                txtColor = "red";
+              }
+              document.getElementById("userResponse1").innerHTML = msg;
+              document.getElementById("userResponse1").style.color = txtColor;
+            }
+        </script>
+    </div> <!-- jsConfirmExample -->
+    <div id="jsPromptExample" style="margin-top: 25px">
+        <button onclick="myPromptFunction();" class="btn btn-danger" style="width:250px;">
+            Show a 'Prompt'
+        </button>
+        <div style="margin:10px;"><p id="userResponse2"></p></div>
+        <script>
+            function myPromptFunction() {
+              var name = prompt("Please enter your name", "none");
+              if (name != null) {
+                document.getElementById("userResponse2").innerHTML =
+                "You have entered: " + name ;
+              }
+            }
+        </script>
+    </div> <!-- jsPromptExample -->
+</div> <!-- alerts -->
+<br>
+<br>
+
+
+</body>
+</html>
