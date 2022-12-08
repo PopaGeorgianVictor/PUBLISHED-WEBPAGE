@@ -1,0 +1,23 @@
+
+<title>Image Load Slow</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
+<script>
+        window.setTimeout(function() {
+    document.getElementById("slow_load").innerHTML="<div  id ='the_slow_image'> <img  src='http://www.seleniumhq.org/images/big-logo.png'> </div>";
+        }, 4000);
+
+    </script>
+<body>
+<div style="margin-left:25px;">
+<h3> This page will load an image slowly</h3>
+<h2> Wait for it .....</h2>
+<h2> Wait for it .....</h2>
+<h2> Wait for it .....</h2>
+<h2> Wait for it .....</h2>
+<div id="slow_load">
+
+</div>
+<div id="image_holder">
+
+
+</div>
