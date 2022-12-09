@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Present VS Displayed</title>
+    <script>
+        function main(){
+            if (document.getElementById('mercedes').checked) {
+                document.getElementById('benz-models').style.display = 'block';
+                document.getElementById('bmw-models').style.display = 'none';
+                document.getElementById('toyota-models').style.display = 'none';
+            }
+            else if(document.getElementById('bmw').checked) {
+                document.getElementById('benz-models').style.display = 'none';
+                document.getElementById('bmw-models').style.display = 'block';
+                document.getElementById('toyota-models').style.display = 'none';
+            }
+            else if(document.getElementById('toyota').checked) {
+                document.getElementById('benz-models').style.display = 'none';
+                document.getElementById('bmw-models').style.display = 'none';
+                document.getElementById('toyota-models').style.display = 'block';
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <h1 style="color:MediumSeaGreen;"><strong><u>Some models are hidden!!!</u></strong></h1>
+    <h3 style="color:MediumSeaGreen;"><strong><u>Select Manufacturer and Model</u></strong></h3>
+    <div>
+        <input onclick="javascript:main();" type="radio" name="manufacturer" id="mercedes" value="mercedes" checked>
+            <label for="mercedes">Mercedes-Benz</label><br>
+            <div id="benz-models" style="margin-left: 50px;">
+                <input type="checkbox" name="mc-model" value="a-class">
+                <label for="a-class">A-Class</label><br>
+                <input type="checkbox" name="mc-model" value="c-class">
+                <label for="c-class">C-Class</label><br>
+                <input type="checkbox" name="mc-model" value="g-class">
+                <label for="g-class">G-Class</label><br>
+            </div>
+        <input onclick="javascript:main();" type="radio" name="manufacturer" id="bmw" value="bmw">
+            <label for="bmw">BMW</label><br>
+            <div id="bmw-models" style="margin-left: 50px;" hidden>
+                <input type="checkbox" name="bm-model" value="m-series">
+                <label for="m-series">M-Series</label><br>
+                <input type="checkbox" name="bm-model" value="3-series">
+                <label for="3-series">3-Series</label><br>
+                <input type="checkbox" name="bm-model" value="6-series">
+                <label for="6-series">6-Series</label><br>
+            </div>
+        <input onclick="javascript:main();" type="radio" name="manufacturer" id="toyota" value="toyota">
+            <label for="toyota">TOYOTA</label><br>
+            <div id="toyota-models" style="margin-left: 50px;" hidden>
+                <input type="checkbox" name="ty-model" value="camry">
+                <label for="camry">Camry</label><br>
+                <input type="checkbox" name="ty-model" value="corola">
+                <label for="corola">Corola</label><br>
+                <input type="checkbox" name="ty-model" value="avalon">
+                <label for="avalon">Avalon</label><br>
+            </div>
+    </div>
+
+</body>
+</html>
