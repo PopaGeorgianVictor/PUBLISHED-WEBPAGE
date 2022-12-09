@@ -1,5 +1,5 @@
 # SITES-FOR-TEST
-this repo contains different sites for testing
+this repo contains published sites for testing
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/alert_confirm_prompt
 
