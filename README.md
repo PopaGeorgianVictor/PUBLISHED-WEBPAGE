@@ -1,6 +1,8 @@
 # SITES-FOR-TEST
 this repo contains published sites for testing
 
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGE/all_in_one (this site contains all web testing pages)
+
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/alert_confirm_prompt
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/checkbox
