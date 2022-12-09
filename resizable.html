@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+
+      <title>Resizable</title>
+      <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+      <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+      <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+      <!-- CSS -->
+      <style>
+         .ui-widget-header {
+            background:white;
+            border: 2px solid yellow;
+            color: MediumSeaGreen;
+            font-weight: bold;
+         }
+         .ui-widget-content {
+            background: forestgreen;
+            border: 2px solid black;
+            color: crimson;
+         }
+         #resizable { width: 100px; height: 100px; padding: 0.5em;
+            text-align: center; }
+      </style>
+      <!-- Javascript -->
+      <script>
+         $(function() {
+            $( "#resizable" ).resizable();
+         });
+      </script>
+
+    <div style="text-align: center;">
+       <h1 style="color:MediumSeaGreen;"><strong><u>Resizable</u></strong></h1>
+    </div>
+
+
+   <body>
+
+      <!-- HTML -->
+      <div id="resizable" class="ui-widget-content">
+         <h3 class="ui-widget-header">Pull the edges!!!</h3>
+      </div>
+  </body>
+</html>
