@@ -21,3 +21,8 @@ https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/resizable
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/sliders
 
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/login_singup
+
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/form_auth
+
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/register
