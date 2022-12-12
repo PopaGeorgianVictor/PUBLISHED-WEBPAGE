@@ -25,7 +25,7 @@
 
 <body>
     <div style="text-align: center;">
-        <h1  style="color:#FF0000; font-family : Comic Sans MS"><strong><u>Alerts, Confirms & Prompts</u></strong></h1>
+        <h1  style="color:#FF0000; font-family: Comic Sans MS"><strong><u>Alerts, Confirms & Prompts</u></strong></h1>
     </div>
 <br>
 <br>
@@ -83,11 +83,14 @@
         </button>
         <div style="margin:10px;"><p id="userResponse2"></p></div>
         <script>
+
             function myPromptFunction() {
               var name = prompt("Please enter your name", "none");
               if (name != null) {
                 document.getElementById("userResponse2").innerHTML =
-                "You have entered: " + name ;
+                "You have entered: " + name ; txtColor = "red";
+                document.getElementById("userResponse2").style.color = txtColor;
+
               }
             }
         </script>
