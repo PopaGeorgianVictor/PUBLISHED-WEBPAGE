@@ -23,6 +23,6 @@ https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/sliders
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/login_singup
 
-https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/form_auth
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/social_login_form
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/register
