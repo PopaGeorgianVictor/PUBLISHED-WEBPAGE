@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<style>
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url(https://i.postimg.cc/C1252K1z/Screenshot-1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family : Verdana,Tahoma, sans-serif;
+}
+
+.box{
+    width: 380px;
+    height: 500px;
+    background-color:rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    margin: 8% auto 0;
+    text-align: center;
+    position: relative;
+    box-sizing: border-box;
+    flex-direction: column;
+}
+
+.box img{
+	width:100px;
+    margin-top:-50px ;
+    background-image: url(https://i.postimg.cc/Gh58fq4X/Screenshot-2.png);
+}
+
+.header {
+	width: 300px;
+    height: 50px;
+    text-transform: uppercase;
+	display: inline-flex;
+    padding-top: 20px;
+    padding-bottom: 0;
+	justify-content: space-between;
+}
+
+.header a {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+	display: inline-flex;
+    padding-left: 25px;
+    padding-right: 25px;
+	justify-content: center;
+    cursor:pointer;
+}
+
+.header .active {
+    color: #df80ff;
+	font-weight: bold;
+	position: relative;
+}
+
+.header .active:after {
+	position: absolute;
+    border: none;
+	content: "";
+}
+
+#errorMsg{
+    color:red;
+    text-align: center;
+    font-size: 12px;
+    padding-bottom: 20px;
+
+}
+
+.content{
+    display: inline-flex;
+    overflow: hidden;
+}
+
+form {
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+	flex-shrink: 0;
+	flex-direction: column;
+	transition: right 0.5s;
+}
+
+.login a{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+
+}
+
+.extend form {
+	right: 100%;
+}
+
+input[type=text], input[type=password], input[type=email]{
+	display:block;
+    position: relative;
+	border: 4px solid #ffffff;
+	padding: 12px;
+    margin-bottom: 15px;
+    width: 100%;
+ 	box-sizing: border-box;
+    font-size: 17px;
+    outline: none;
+}
+
+input[type=text]:hover,  input[type=password]:hover, input[type=email]:hover{
+    border: 4px solid #df80ff;
+
+}
+
+input[type=submit]{
+    display:block;
+    position: relative;
+    border: 3px solid #df80ff;
+    padding: 12px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 25px;
+    background-color:#600080 ;
+    text-align:center;
+    font-size: 20px;
+    color: #ffffff;
+	cursor:pointer;
+    outline: none;
+}
+
+input[type=submit]:hover{
+	 background-color:#ffffff;
+     color: #000000;
+     font-weight: bold;
+}
+input[type=checkbox]{
+    background-color:#df80ff;
+}
+#check{
+    margin-top: 10px;
+    text-align: left;
+    color: #ffffff;
+    font-size: 15px;
+}
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <title>LogIn and SignUp Page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="box">
+
+        <img src="icon.png">
+        <div class="page">
+            <div class="header">
+                <a id="login" class="active" href="#login">login</a>
+                <a id="signup" href="#signup">signup</a>
+            </div>
+            <div id="errorMsg"></div>
+            <div class="content">
+                <form class="login" name="loginForm" onsubmit="return validateLoginForm()" method="POST">
+                    <input type="text" name="name" id="logName" placeholder="Username">
+                    <input type="password" name="password" id="logPassword" placeholder="Password">
+                    <div id="check">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me</label>
+                    </div>
+                    <br><br>
+                    <input type="submit" value="Login">
+                    <a href="#">Forgot Password?</a>
+                </form>
+                <form class="signup" name="signupForm" onsubmit="return validateSignupForm()" method="POST">
+                    <input type="email" name="email" id="signEmail" placeholder="Email">
+                    <input type="text" name="name" id="signName" placeholder="Username">
+                    <input type="password" name="password" id="signPassword" placeholder="Password"><br>
+                    <input type="submit" value="SignUp">
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>$(window).on("hashchange", function () {
+	if (location.hash.slice(1) == "signup") {
+		$(".page").addClass("extend");
+		$("#login").removeClass("active");
+		$("#signup").addClass("active");
+	} else {
+		$(".page").removeClass("extend");
+		$("#login").addClass("active");
+		$("#signup").removeClass("active");
+	}
+});
+$(window).trigger("hashchange");
+
+function validateLoginForm() {
+	var name = document.getElementById("logName").value;
+	var password = document.getElementById("logPassword").value;
+
+	if (name == "" || password == "") {
+		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		return false;
+	}
+
+	else if (password.length < 8) {
+		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+		return false;
+	}
+	else {
+		alert("Successfully logged in");
+		return true;
+	}
+}
+function validateSignupForm() {
+	var mail = document.getElementById("signEmail").value;
+	var name = document.getElementById("signName").value;
+	var password = document.getElementById("signPassword").value;
+
+	if (mail == "" || name == "" || password == "") {
+		document.getElementById("errorMsg").innerHTML = "Please fill the required fields"
+		return false;
+	}
+
+	else if (password.length < 8) {
+		document.getElementById("errorMsg").innerHTML = "Your password must include atleast 8 characters"
+		return false;
+	}
+	else {
+		alert("Successfully signed up");
+		return true;
+	}
+}</script>
+</body>
