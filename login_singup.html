@@ -187,7 +187,8 @@ input[type=checkbox]{
     <script src="index.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"
 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-<script>$(window).on("hashchange", function () {
+<script>
+$(window).on("hashchange", function () {
 	if (location.hash.slice(1) == "signup") {
 		$(".page").addClass("extend");
 		$("#login").removeClass("active");
