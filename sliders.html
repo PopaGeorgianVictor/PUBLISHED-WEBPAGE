@@ -13,8 +13,18 @@
 
 
                <style>
+
+                body{
+
+    background-image: url(https://wallpapercave.com/wp/wp8926938.jpg);
+    background-size: cover;
+    font-family: Comic Sans MS;
+
+
+}
 .slidecontainer {
   width: 100%;
+
 }
 
 .slider {
@@ -34,8 +44,8 @@
 }
 
 .slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
+  -webkit-appearance:  button-bevel;
+  appearance: auto;
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -47,20 +57,16 @@
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #04AA6D;
+  background: cyan;
   cursor: pointer;
 }
 </style>
-</head>
 <body>
-
-<h1 style="color:MediumSeaGreen;"><strong><u> Quality Level</u></strong></h1>
-<br>
-<br>
+<div style = "height:50px"></div>
 
 <div class="slidecontainer">
   <input type="range" min="0" max="100" value="70" class="slider" id="myRange">
-  <h3 style="color:DarkBlue;"><strong><span id="demo"></span>%</h3>
+  <h3 style="color:cyan; "><strong><span id="demo"></span>%</h3>
 </div>
 
 <script>
