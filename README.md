@@ -26,3 +26,5 @@ https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/login_sign_up
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/social_login_form
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/register
+
+https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/right_click_menu
