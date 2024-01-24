@@ -3,9 +3,6 @@
 
 ![](https://media.tenor.com/8tr_CU6730MAAAAC/web-dev-website-development.gif)
 
-
-<a href="https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/all_in_one " target="_blank">All web testing pages</a>
-
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/all_in_one (this site contains all web testing pages)
 
 https://popageorgianvictor.github.io/PUBLISHED-WEBPAGES/search_bar
